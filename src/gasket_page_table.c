@@ -52,8 +52,15 @@
 #include <linux/pagemap.h>
 #include <linux/version.h>
 #include <linux/vmalloc.h>
+#include <linux/version.h>
 
 #if __has_include(<linux/dma-buf.h>)
+#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 16, 0)
+MODULE_IMPORT_NS(DMA_BUF);
+#else
+MODULE_IMPORT_NS("DMA_BUF");
+#endif
+
 MODULE_IMPORT_NS(DMA_BUF);
 #endif
 
