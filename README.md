@@ -1,3 +1,5 @@
+These are just changes I have made to get the driver to install on kernel 6.16 that I am running.
+
 # Coral Gasket Driver
 
 The Coral Gasket Driver allows usage of the [Coral EdgeTPU](https://coral.ai/) on Linux systems. The driver contains two modules:
